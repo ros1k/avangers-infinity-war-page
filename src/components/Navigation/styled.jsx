@@ -4,8 +4,10 @@ import {Link} from 'react-router-dom'
 
 export const Nav = styled.nav`
      width: 100% ;
-     border: 1px solid #9999995d;
+     border: 1px solid #99999930;
      border-top:none;
+     border-bottom:none;
+   
      color: red;
      display:flex;
      justify-content: center;
@@ -23,8 +25,21 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
     padding: 0 25px;
     height: 100%;
+    transition: 0.3s ease-in-out;
+    position: relative;
     &:hover{
         background-color: #9999991d;
+    }
+    &:after{
+        content: '';
+        display: ${props => props.active ? 'block' : 'none'}; 
+        position: absolute;
+        bottom:0;
+        left:0;
+        width: 100%;
+        height: 2px;
+        background-color: #F2F2F2;
+        
     }
 `
 export const NavLink = styled(Link)`
