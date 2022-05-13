@@ -5,29 +5,33 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import './index.css';
-import App from './App';
+
 import Home from './pages/Home';
+import Synopsis from './pages/Synopsis';
+import Information from './pages/Synopsis/information';
+
+
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-            {/* <Route index path="synopsis" element={<Synopsis />}>
+  
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="synopsis" element={<Synopsis />}>
               <Route path=":informationId" element={<Information />} />
             </Route>
-            <Route index path="cast" element={<Cast />}>
-              <Route path=":memberId" element={<Member />} />
-            </Route>
-            <Route index path="gallery" element={<Gallery />}>
-              <Route path=":actorId" element={<Actor />} />
-            </Route> */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+              {/* <Route path="cast" element={<Cast />}>
+                <Route path=":memberId" element={<Member />} />
+              </Route>
+              <Route path="gallery" element={<Gallery />}>
+                <Route path=":actorId" element={<Actor />} />
+              </Route>  */}
+        </Routes>
+      </BrowserRouter>
+    
   </React.StrictMode>
 );
 
