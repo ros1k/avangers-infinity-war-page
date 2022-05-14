@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const HeroSection = styled.div`
   height: 100vh;
-  padding: 80px 82px 0 82px;
+
 `
 
 export const Slide = styled.div`
@@ -57,18 +57,133 @@ export const SlideLink = styled(Link)`
   color: white;
   position: relative;
   width: 300px;
-  display: inline-block;
-  text-align: center;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 0;
   font-size:14px;
   letter-spacing:1px;
+  &:hover .border__big{
+    top:-5px;
+
+    polygon{
+        fill: #5922F7;
+        fill-opacity: 100%;
+    }
+    path{
+        fill: #5922f7;
+    }
+  }
+  &:hover .border__small{
+    top:-5px;
+    polygon{
+        fill: #5922F7;
+        fill-opacity: 100%;
+        stroke: #5922F7;
+    }
+    path{
+        fill: #5922f7;
+    }
+  }
 `
+
+
+// export const BorderBox1 = styled.div`
+//     width: 100%;
+//     height: 50px;
+//     position: absolute;
+//     top:-5px;
+//     left:0;
+//     transition: 0.2s ease-in-out;
+//     &:before{
+//         content:"";
+//         position: absolute;
+//         bottom:-3px;
+//         left:15px;
+//         width:2px;
+//         height:130%;
+//         background-color: #99999930;
+//         transform: rotateZ(-27deg);
+//     }
+//     &:after{
+//         content:"";
+//         position: absolute;
+//         bottom:-3px;
+//         right:15px;
+//         width:2px;
+//         height:130%;
+//         background-color: #99999930;
+//         transform: rotateZ(27deg);
+//     }
+//     span:nth-child(1){
+//         display: inline-block;
+//         width: 100%;
+//         border-bottom:2px solid #99999930;
+//         position: absolute;
+//         top:-10px;
+//         left:0;
+//     }
+//     span:nth-child(2){
+//         display: inline-block;
+//         width: 80%;
+//         border-bottom:2px solid #99999930;
+//         position: absolute;
+//         bottom:0;
+//         left:10%;
+//     }
+// `
+// export const BorderBox2 = styled.div`
+//     width: 90%;
+//     height: 50px;
+//     position: absolute;
+//     top:5px;
+//     left:5%;
+//     transition: 0.2s ease-in-out;
+//     &:before{
+//         content:"";
+//         position: absolute;
+//         bottom:-3px;
+//         left:15px;
+//         width:2px;
+//         height:130%;
+//         background-color: #99999930;
+//         transform: rotateZ(-27deg);
+//     }
+//     &:after{
+//         content:"";
+//         position: absolute;
+//         bottom:-3px;
+//         right:15px;
+//         width:2px;
+//         height:130%;
+//         background-color: #99999930;
+//         transform: rotateZ(27deg);
+//     }
+//     span:nth-child(1){
+//         display: inline-block;
+//         width: 100%;
+//         border-bottom:2px solid #99999930;
+//         position: absolute;
+//         top:-10px;
+//         left:0;
+//     }
+//     span:nth-child(2){
+//         display: inline-block;
+//         width: 80%;
+//         border-bottom:2px solid #99999930;
+//         position: absolute;
+//         bottom:0;
+//         left:10%;
+//     }
+    
+// `
 
 export const SlideButtonLeft = styled.button`
     position: absolute;
     bottom:0;
     top:unset;
-    left: -42px;
+    left: 40px;
     z-index: 999;
     right:unset;
     width: 40px;
@@ -83,13 +198,16 @@ export const SlideButtonLeft = styled.button`
     &:before{
         display: none;
     }
+    &:active,&:focus{
+        color:white;
+    }
 
 `
 export const SlideButtonRight = styled.button`
     position: absolute;
     bottom:0;
     top:unset;
-    left: 0px;
+    left: 82px;
     z-index: 999;
     right:unset;
     width: 40px;
@@ -101,96 +219,30 @@ export const SlideButtonRight = styled.button`
         color:white;
         background-color: #5922F7;
     }
-    }
     &:before{
         display: none;
     }
+    &:active,&:focus{
+        color:white;
+    }
 `
 
-export const BorderBox1 = styled.div`
-    width: 100%;
-    height: 50px;
+export const ProgressRoundWrap = styled.div`
     position: absolute;
-    top:-5px;
-    left:0;
-    &:before{
-        content:"";
-        position: absolute;
-        bottom:-3px;
-        left:15px;
-        width:2px;
-        height:130%;
-        background-color: #99999930;
-        transform: rotateZ(-27deg);
-    }
-    &:after{
-        content:"";
-        position: absolute;
-        bottom:-3px;
-        right:15px;
-        width:2px;
-        height:130%;
-        background-color: #99999930;
-        transform: rotateZ(27deg);
-    }
-    span:nth-child(1){
-        display: inline-block;
-        width: 100%;
-        border-bottom:2px solid #99999930;
-        position: absolute;
-        top:-10px;
-        left:0;
-    }
-    span:nth-child(2){
-        display: inline-block;
-        width: 80%;
-        border-bottom:2px solid #99999930;
-        position: absolute;
-        bottom:0;
-        left:10%;
-    }
-`
-export const BorderBox2 = styled.div`
-    width: 90%;
-    height: 50px;
-    position: absolute;
-    top:5px;
-    left:5%;
-    &:before{
-        content:"";
-        position: absolute;
-        bottom:-3px;
-        left:15px;
-        width:2px;
-        height:130%;
-        background-color: #99999930;
-        transform: rotateZ(-27deg);
-    }
-    &:after{
-        content:"";
-        position: absolute;
-        bottom:-3px;
-        right:15px;
-        width:2px;
-        height:130%;
-        background-color: #99999930;
-        transform: rotateZ(27deg);
-    }
-    span:nth-child(1){
-        display: inline-block;
-        width: 100%;
-        border-bottom:2px solid #99999930;
-        position: absolute;
-        top:-10px;
-        left:0;
-    }
-    span:nth-child(2){
-        display: inline-block;
-        width: 80%;
-        border-bottom:2px solid #99999930;
-        position: absolute;
-        bottom:0;
-        left:10%;
-    }
+    top:-6px;
+    left:-6px;
+    border:4px solid #99999930;
+    border-radius: 50%;
+    width: 61px;
+    height: 61px;
     
+`
+export const CustomPaginationElement = styled.div`
+    margin: 40px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    letter-spacing: 1px;
 `

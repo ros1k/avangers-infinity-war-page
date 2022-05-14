@@ -9,3 +9,66 @@
     bottom:0;
     left:0;
 }
+.slick-dots{
+    position: absolute;
+    right:0;
+    top:0;
+    width: 80px;
+    height: 100%;
+    z-index: 999;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.slick-dots li{
+    display: inline-block;
+
+    height: auto;
+    width: auto;
+}
+.slick-dots li button{
+    display: inline-block;
+    color:white;
+    font-size:16px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    line-height: 16px;
+}
+.slick-dots li button:before{
+    content:"";
+    display:none;
+}
+.progress circle {
+    fill: transparent;
+    stroke: #999999;
+    stroke-width: 6;
+}
+
+.progress{
+    position: absolute;
+    top:-34px;
+    left: -33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border__big{
+    position: absolute;
+    top:-15px;
+    left:0;
+    transition: 0.2s ease-in-out;
+    z-index: -1;
+}
+.border__small{
+    position: absolute;
+    top:0px;
+    left:27px;
+    transition: 0.2s ease-in-out;
+    z-index: -1;
+}
+.border__big--svg polygon,.border__small--svg polygon{
+    fill-opacity: 0;
+    transition: 0.2s ease-in-out;
+}
