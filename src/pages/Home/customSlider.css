@@ -27,6 +27,10 @@
     height: auto;
     width: auto;
 }
+.slick-dots li:first-child > div > div> .CircleUp,
+.slick-dots li:first-child > div > div> .CircleUnder{
+    left:-3px;
+}
 .slick-dots li button{
     display: inline-block;
     color:white;

@@ -229,12 +229,23 @@ export const SlideButtonRight = styled.button`
 
 export const ProgressRoundWrap = styled.div`
     position: absolute;
-    top:-6px;
-    left:-6px;
-    border:4px solid #99999930;
-    border-radius: 50%;
-    width: 61px;
-    height: 61px;
+    left:-3px;
+    width: 60px;
+    height: 60px;
+    .CircleUp{
+        position: absolute;
+        top:-3px;
+        left:-1px;
+        transform: rotateZ(-90deg);
+        .another-circle {
+            stroke-dasharray: 227;
+            stroke-dashoffset: 227;
+            transition: stroke-dashoffset 2s linear;
+        }
+        .another-circle:hover {
+            stroke-dashoffset: 0;
+        }
+    }
     
 `
 export const CustomPaginationElement = styled.div`
@@ -244,5 +255,6 @@ export const CustomPaginationElement = styled.div`
     justify-content: center;
     align-items: center;
     padding:15px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-stretch: wider;
 `
