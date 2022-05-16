@@ -29,8 +29,8 @@ viewBox="0 0 25.32 25.35"
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <g id="Warstwa_x0020_1">
- <circle cx="13" cy="13" r="11" fill="transparent" stroke="#D1D0D140"  stroke-width="1" />
- <circle class="another-circle" cx="13" cy="13" r="11" fill="transparent" stroke="#D1D0D1" stroke-width="1" />
+ <circle class="background-circle" cx="13" cy="13" r="11" fill="transparent" stroke="#D1D0D140"  stroke-width="1" />
+ <circle class="progress-circle" cx="13" cy="13" r="11" fill="transparent" stroke="#D1D0D1" stroke-width="1" />
  </g>
 </svg>`
 

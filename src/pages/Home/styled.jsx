@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
+import { keyframes } from 'styled-components';
 
 
 export const HeroSection = styled.div`
@@ -8,13 +9,27 @@ export const HeroSection = styled.div`
 `
 
 export const Slide = styled.div`
-  padding-top:150px;
+  padding: 150px 80px 0 80px;
   display: flex!important;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100%;
   width: 100%;
+  background-image: ${props => props.backgroundImage ? `url(${props.backgroundImage})` : 'none'};
+  background-size: cover;
+  position: relative;
+  &:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.25;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+  }
 `
 export const Title = styled.h1`
   font-family: 'Montserrat', sans-serif;
@@ -24,6 +39,7 @@ export const Title = styled.h1`
   margin-bottom: 80px;
   display: inline-block;
   text-align: center;
+  z-index: 2;
   &:after{
     content:"";
     position: absolute;
@@ -42,6 +58,7 @@ export const SubTitle = styled.p`
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 30px;
+    z-index: 2;
     span{
         font-weight: 600;
     }
@@ -50,12 +67,14 @@ export const SubTitle2 = styled.p`
     font-size: 22px;
     font-weight: 300;
     margin-bottom:60px;
+    z-index: 2;
 `
 export const SlideLink = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   color: white;
   position: relative;
+  z-index: 2;
   width: 300px;
   height: 60px;
   display: flex;
@@ -68,117 +87,25 @@ export const SlideLink = styled(Link)`
     top:-5px;
 
     polygon{
-        fill: #5922F7;
+        fill: ${props => props.themecolor};
         fill-opacity: 100%;
     }
     path{
-        fill: #5922f7;
+        fill: ${props => props.themecolor};
     }
   }
   &:hover .border__small{
     top:-5px;
     polygon{
-        fill: #5922F7;
+        fill: ${props => props.themecolor};
         fill-opacity: 100%;
-        stroke: #5922F7;
+        stroke: ${props => props.themecolor};
     }
     path{
-        fill: #5922f7;
+        fill: ${props => props.themecolor};
     }
   }
 `
-
-
-// export const BorderBox1 = styled.div`
-//     width: 100%;
-//     height: 50px;
-//     position: absolute;
-//     top:-5px;
-//     left:0;
-//     transition: 0.2s ease-in-out;
-//     &:before{
-//         content:"";
-//         position: absolute;
-//         bottom:-3px;
-//         left:15px;
-//         width:2px;
-//         height:130%;
-//         background-color: #99999930;
-//         transform: rotateZ(-27deg);
-//     }
-//     &:after{
-//         content:"";
-//         position: absolute;
-//         bottom:-3px;
-//         right:15px;
-//         width:2px;
-//         height:130%;
-//         background-color: #99999930;
-//         transform: rotateZ(27deg);
-//     }
-//     span:nth-child(1){
-//         display: inline-block;
-//         width: 100%;
-//         border-bottom:2px solid #99999930;
-//         position: absolute;
-//         top:-10px;
-//         left:0;
-//     }
-//     span:nth-child(2){
-//         display: inline-block;
-//         width: 80%;
-//         border-bottom:2px solid #99999930;
-//         position: absolute;
-//         bottom:0;
-//         left:10%;
-//     }
-// `
-// export const BorderBox2 = styled.div`
-//     width: 90%;
-//     height: 50px;
-//     position: absolute;
-//     top:5px;
-//     left:5%;
-//     transition: 0.2s ease-in-out;
-//     &:before{
-//         content:"";
-//         position: absolute;
-//         bottom:-3px;
-//         left:15px;
-//         width:2px;
-//         height:130%;
-//         background-color: #99999930;
-//         transform: rotateZ(-27deg);
-//     }
-//     &:after{
-//         content:"";
-//         position: absolute;
-//         bottom:-3px;
-//         right:15px;
-//         width:2px;
-//         height:130%;
-//         background-color: #99999930;
-//         transform: rotateZ(27deg);
-//     }
-//     span:nth-child(1){
-//         display: inline-block;
-//         width: 100%;
-//         border-bottom:2px solid #99999930;
-//         position: absolute;
-//         top:-10px;
-//         left:0;
-//     }
-//     span:nth-child(2){
-//         display: inline-block;
-//         width: 80%;
-//         border-bottom:2px solid #99999930;
-//         position: absolute;
-//         bottom:0;
-//         left:10%;
-//     }
-    
-// `
-
 export const SlideButtonLeft = styled.button`
     position: absolute;
     bottom:0;
@@ -188,12 +115,13 @@ export const SlideButtonLeft = styled.button`
     right:unset;
     width: 40px;
     height: 60px;
-    background-color: black;
+    background-color: ${props => props.themecolor };
     color:white;
     transition: 0.2s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
     &:hover{
         color:white;
-        background-color: #5922F7;
+        background-color: black;
     }
     &:before{
         display: none;
@@ -217,7 +145,7 @@ export const SlideButtonRight = styled.button`
     transition: 0.2s ease-in-out;
     &:hover{
         color:white;
-        background-color: #5922F7;
+        background-color: ${props => props.themecolor };
     }
     &:before{
         display: none;
@@ -226,7 +154,30 @@ export const SlideButtonRight = styled.button`
         color:white;
     }
 `
+export const CircleAnimation = keyframes`
+    0%{
+        opacity:0;
 
+    }
+    1%{
+        opacity:1;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+
+`
+export const BackgroundCircle = keyframes`
+    0%{
+        opacity:0;
+    }
+    50%{
+        
+    }
+    100%{
+        opacity:1;
+    }
+`
 export const ProgressRoundWrap = styled.div`
     position: absolute;
     left:-3px;
@@ -234,27 +185,37 @@ export const ProgressRoundWrap = styled.div`
     height: 60px;
     .CircleUp{
         position: absolute;
-        top:-3px;
-        left:-1px;
+        top:-2px;
+        left:-5px;
         transform: rotateZ(-90deg);
-        .another-circle {
+        .background-circle{
+            opacity:0;
+        }
+        .progress-circle {
             stroke-dasharray: 227;
-            stroke-dashoffset: 227;
-            transition: stroke-dashoffset 2s linear;
+            stroke-dashoffset: 227; 
         }
-        .another-circle:hover {
-            stroke-dashoffset: 0;
+        &.active{
+            .background-circle{
+                animation: ${BackgroundCircle} 2s linear forwards;
+            }
+            .progress-circle {
+                animation: ${CircleAnimation} 8s linear;
+            }
         }
+        
+        
     }
     
 `
 export const CustomPaginationElement = styled.div`
-    margin: 40px 0;
+    margin: 15px 0;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding:15px;
     letter-spacing: 2px;
+    font-size:12px;
     font-stretch: wider;
 `

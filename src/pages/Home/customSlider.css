@@ -23,13 +23,17 @@
 }
 .slick-dots li{
     display: inline-block;
-
+    
     height: auto;
     width: auto;
 }
+
+.slick-dots li.slick-active .CircleUp{
+    opacity:1;
+}
 .slick-dots li:first-child > div > div> .CircleUp,
 .slick-dots li:first-child > div > div> .CircleUnder{
-    left:-3px;
+    left:-6px;
 }
 .slick-dots li button{
     display: inline-block;
@@ -76,3 +80,4 @@
     fill-opacity: 0;
     transition: 0.2s ease-in-out;
 }
+
