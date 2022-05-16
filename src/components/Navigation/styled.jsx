@@ -32,12 +32,13 @@ export const NavItem = styled.li`
     }
     &:after{
         content: '';
-        display: ${props => props.active ? 'block' : 'none'}; 
+        opacity: ${props => props.active ? 1 : 0}; 
         position: absolute;
         bottom:0;
         left:0;
         width: 100%;
         height: 2px;
+        transition: opacity 0.3s ease;
         background-color: #F2F2F2;
         
     }
