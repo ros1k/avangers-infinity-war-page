@@ -17,13 +17,13 @@ import { faAngleLeft,faAngleRight } from '@fortawesome/free-solid-svg-icons'
           
       
 const Synopsis = () => {
-
+  const [themeColor, setThemeColor] = React.useState('#fff')
   const SynopsisSettings = {
     dots: false,
     infinite: true,
     speed: 1500,
+    slidesToShow: 6,
     arrows:false,
-    slidesToShow: 1,
     slidesToScroll: 1,
     currentSlide: 0,
     prevArrow:<SlideButtonLeft ><FontAwesomeIcon icon={faAngleLeft} /></SlideButtonLeft>,
@@ -32,91 +32,52 @@ const Synopsis = () => {
   return (
     <>
         <Layout>
-            <FirstSlider>
-                <GemStoneWrapper backgroundimage={image}>
-                    <GemStoneImageWrapper>
-                      <GemStoneImage src={image2} alt="gemstone1" />
-                    </GemStoneImageWrapper>
-                    <GemStoneDetails>
-                        <GemStoneSynopsis>
-                            <GemStoneTitle>
-                              <strong>Soul</strong> Gem Synopsis
-                              </GemStoneTitle>
-                            <GemStoneDescription>
-                                Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
-                                sed do eiusmod tempor incididunt ut labore et dolore.
-                              </GemStoneDescription>
-                              <GemStoneLink to="/">
-                                ver mas
-                              </GemStoneLink>
-                        </GemStoneSynopsis>
-                    </GemStoneDetails>
-                </GemStoneWrapper>
-                <GemStoneWrapper backgroundimage={image2}>
-                    <GemStoneImageWrapper>
-                      <GemStoneImage src={image} alt="gemstone1" />
-                    </GemStoneImageWrapper>
-                </GemStoneWrapper>
-                <GemStoneWrapper backgroundimage={image2}>
-                    <GemStoneImageWrapper>
-                      <GemStoneImage src={image} alt="gemstone1" />
-                    </GemStoneImageWrapper>
-                </GemStoneWrapper>
-                <GemStoneWrapper backgroundimage={image2}>
-                    <GemStoneImageWrapper>
-                      <GemStoneImage src={image} alt="gemstone1" />
-                    </GemStoneImageWrapper>
-                </GemStoneWrapper>
-                <GemStoneWrapper backgroundimage={image2}>
-                    <GemStoneImageWrapper>
-                      <GemStoneImage src={image} alt="gemstone1" />
-                    </GemStoneImageWrapper>
-                </GemStoneWrapper>
-                <GemStoneWrapper backgroundimage={image2}>
-                    <GemStoneImageWrapper>
-                      <GemStoneImage src={image} alt="gemstone1" />
-                    </GemStoneImageWrapper>
-                </GemStoneWrapper>
-                <GemStoneWrapper backgroundimage={image2}>
-                    <GemStoneImageWrapper>
-                      <GemStoneImage src={image} alt="gemstone1" />
-                    </GemStoneImageWrapper>
-                </GemStoneWrapper>
-            </FirstSlider>
+          <Outlet context={{themeColor}}/>
+            
             <SynopsisNavigation {...SynopsisSettings}>
+            <CustomPaginationElement>
+                  <CustomPaginationElementLink to={`/synopsis`}>
+                      general
+                    </CustomPaginationElementLink>
+              </CustomPaginationElement>
+              <CustomPaginationElement>
+                  <CustomPaginationElementLink to={`/synopsis/gauntlet`}>
+                       gauntlet
+                    </CustomPaginationElementLink>
+              </CustomPaginationElement>
               <CustomPaginationElement>
                   <CustomPaginationElementLink to={`/synopsis/soul`}>
-                      gem
+                       soul gem
                     </CustomPaginationElementLink>
               </CustomPaginationElement>
               <CustomPaginationElement>
                <CustomPaginationElementLink to={`/synopsis/reality`}>
-                  gem
+                  reality gem
                 </CustomPaginationElementLink>
               </CustomPaginationElement>
               <CustomPaginationElement>
                   <CustomPaginationElementLink to={`/synopsis/space`}>
-                      gem
+                      space gem
                     </CustomPaginationElementLink>
               </CustomPaginationElement>
               <CustomPaginationElement>
                   <CustomPaginationElementLink to={`/synopsis/power`}>
-                      gem
+                      power gem
                     </CustomPaginationElementLink>
               </CustomPaginationElement>
               <CustomPaginationElement>
                   <CustomPaginationElementLink to={`/synopsis/time`}>
-                      gem
+                      time gem
                     </CustomPaginationElementLink>
               </CustomPaginationElement>
               <CustomPaginationElement>
                   <CustomPaginationElementLink to={`/synopsis/mind`}>
-                      gem
+                      mind gem
                     </CustomPaginationElementLink>
               </CustomPaginationElement>
 
             </SynopsisNavigation>
-            <Outlet/>
+            
         </Layout>
     </>
   )

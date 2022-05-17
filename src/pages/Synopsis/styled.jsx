@@ -2,18 +2,41 @@ import styled, { keyframes } from 'styled-components'
 import {Link } from 'react-router-dom';
 import Slider from 'react-slick';
 
-export const FirstSlider = styled.div`
-    height: calc(100vh - 81px);
+export const SynopsisChild = styled.div`
+    height: 100vh;
+    padding-bottom:81px;
+    background-color: ${props => props.themeColor};
 `
 export const SynopsisNavigation = styled(Slider)`
     position: absolute;
     bottom:0;
-    border:1px solid red;
     left:122px;
     width: calc(100% - 162px - 40px - 40px - 2px);
     height: 81px;
+    backdrop-filter: blur(18px);
+    border-right: 1px solid #99999950;
+    border-left: 1px solid #99999950;
+    border-top: 1px solid #99999950;
 `
-
+export const CustomPaginationElement = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+`
+export const CustomPaginationElementLink = styled(Link)`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+    font-size: 14px;
+    
+`
 export const GemStoneWrapper = styled.div`
     background-image: ${props => `url(${props.backgroundimage})`};
     height: 100vh;
@@ -30,19 +53,7 @@ export const GemStoneImage = styled.img`
     width: 100px;
     height: 100px;
 `
-export const CustomPaginationElement = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-`
-export const CustomPaginationElementLink = styled(Link)`
-    text-decoration: none;
-    color:white;
-    text-transform: uppercase;
-    
-`
+
 export const SlideButtonLeft = styled.button`
     position: absolute;
     bottom:0;
