@@ -69,7 +69,7 @@ const Home = () => {
     currentSlide: 0,
     prevArrow:<SlideButtonLeft themecolor={currentSlideThemeColor}><FontAwesomeIcon icon={faAngleLeft} /></SlideButtonLeft>,
     nextArrow:<SlideButtonRight themecolor={currentSlideThemeColor}><FontAwesomeIcon icon={faAngleRight} /></SlideButtonRight>,
-    dotsClass: "slick-dots slick-thumb",
+    dotsClass: "slick-dots slick-thumb slick-dots-home",
     afterChange: function( newIndex) {
       setCurrentSlide(newIndex)
       setCurrentSlideThemeColor(themeColors[newIndex])

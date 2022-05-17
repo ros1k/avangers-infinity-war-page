@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 export const Nav = styled.nav`
      width: 100% ;
-     border: 1px solid #99999930;
+     border: 1px solid #99999950;
      border-top:none;
      border-bottom:none;
    

@@ -9,7 +9,7 @@ const SideBarWrapper = styled.div`
     align-items: center;
     height: 100vh;
     width: 82px;
-    border-left: 1px solid #99999930;
+    border-left: 1px solid #99999950;
     backdrop-filter: blur(18px);
     position: absolute;
     top:0px;
