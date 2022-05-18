@@ -9,7 +9,7 @@ import image from '../../assets/images/916213.jpg'
 import image2 from '../../assets/images/916247.jpg'
 import SynopsisNavigation from '../../components/SynopsisNavigation'
 
-const Information = () => {
+const Gems = () => {
   const {themeColor} = useOutletContext();
 
   return (
@@ -57,4 +57,4 @@ const Information = () => {
   )
 }
 
-export default Information
+export default Gems

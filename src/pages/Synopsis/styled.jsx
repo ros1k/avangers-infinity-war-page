@@ -25,8 +25,6 @@ export const GemStoneImage = styled.img`
     height: 100px;
 `
 
-
-
 export const GemStoneDetails = styled.div`
    width:100%; 
    height:100%;
@@ -46,7 +44,7 @@ export const GemStoneSynopsis = styled.div`
     &:before{
         content: '';
         position: absolute;
-        top:2px;
+        top:0px;
         left:30px;
         width: 30px;
         height: 4px;
@@ -101,7 +99,7 @@ export const GemStoneLink = styled(Link)`
     }
     &:after{
         content:"";
-        top:-2px;
+        top:0px;
         left:0;
         width: 0;
         height: 100%;
@@ -129,5 +127,63 @@ export const GemStoneSecondLink = styled(GemStoneLink)`
     );
     &:after{
         background: linear-gradient(90deg,#d2d2d2 0%, #a5a5a5 100%);
+    }
+`
+export const GauntletDetails = styled(GemStoneDetails)`
+    padding: 80px;
+    display: flex;
+    min-height: 100%;
+    align-items: flex-start;
+    flex-direction: row;
+    height: 100%;
+
+`
+export const GauntletSynopsis = styled(GemStoneSynopsis)`
+    align-self: flex-end;
+    background-color: transparent;
+    width: 350px;
+    padding:0;
+    &:before{
+        display: none;
+    }
+`
+export const GauntletHistory = styled(GauntletSynopsis)`
+    
+   
+`
+export const GauntletLink = styled(Link)`
+    text-decoration:none;
+    color:white;
+    text-transform: uppercase ;
+    font-size:12px;
+`
+export const GauntletSecondLink = styled(GauntletLink)``
+export const GauntletTitle = styled(GemStoneTitle)`
+    margin-bottom: 33px;
+    font-size:18px;
+    margin-left: 10px;
+    position: relative;
+    &:before{
+        content:"";
+        position: absolute;
+        top:-2px;
+        left:0;
+        width: 150px;
+        height: 14px;
+        background-color: #2020208a;
+        z-index: -1;
+    }
+   
+`
+export const GauntletDescription = styled(GemStoneDescription)`
+    position: relative;
+     &:after{
+        content: '';
+        position: absolute;
+        top:-20px;
+        left:0;
+        height: 3px;
+        width: 30px;
+        background-color: orange;
     }
 `

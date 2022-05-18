@@ -1,9 +1,9 @@
 import React from 'react'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SynopsisNavigationWrapper, CustomPaginationElement, CustomPaginationElementLink , 
     SlideButtonLeft ,SlideButtonRight} from './styled';
-import { faAngleLeft,faAngleRight } from '@fortawesome/free-solid-svg-icons'
+
+    import { faAngleLeft,faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import './customSlider.css'
 
 const SynopsisNavigation = () => {
@@ -20,7 +20,8 @@ const SynopsisNavigation = () => {
         prevArrow:<SlideButtonLeft ><FontAwesomeIcon icon={faAngleLeft} /></SlideButtonLeft>,
         nextArrow:<SlideButtonRight ><FontAwesomeIcon icon={faAngleRight} /></SlideButtonRight>,
       }
-  return (
+  
+      return (
       <>
 
         <SynopsisNavigationWrapper {...SynopsisSettings}>

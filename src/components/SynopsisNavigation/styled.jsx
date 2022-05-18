@@ -31,40 +31,34 @@ export const CustomPaginationElementLink = styled(Link)`
     color:white;
     text-transform: uppercase;
     font-size: 14px;
-    
+    &:hover{
+        background-color: #99999950;
+    }
 `
 
 export const SlideButtonLeft = styled.button`
     position: absolute;
-    bottom:0;
-    top:unset;
-    left: 0px;
-    z-index: 999;
+    top: unset;
     right:unset;
+    bottom:-39px;
+    left: -41px;
+    z-index: 999;
     width: 40px;
-    height: 60px;
+    height: 80px;
     background-color: transparent;
     color: white;
     transition: 0.2s ease-in-out;
+    border-top:1px solid #99999950;
     &:before{
         content:"";
         display: none;
+    }
+    &:hover{
+        background-color: #9999991d;
+        color:white;
     }
 `
-export const SlideButtonRight = styled.button`
-    position: absolute;
-    bottom:0;
-    top:unset;
-    left: 82px;
-    z-index: 999;
-    right:unset;
-    width: 40px;
-    height: 60px;
-    background-color: transparent;
-    color: white;
-    transition: 0.2s ease-in-out;
-    &:before{
-        content:"";
-        display: none;
-    }
+export const SlideButtonRight = styled(SlideButtonLeft)`
+    right: -41px;
+    left: unset;
 `   
