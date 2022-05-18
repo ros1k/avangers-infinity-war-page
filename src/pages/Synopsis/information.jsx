@@ -2,11 +2,12 @@ import React from 'react'
 import { Outlet, useOutletContext } from 'react-router-dom'
 import { GemStoneWrapper, GemStoneImageWrapper, GemStoneImage,
   GemStoneDetails, GemStoneSynopsis, GemStoneTitle, GemStoneDescription, GemStoneLink,
-  SynopsisChild,
+  SynopsisChild, GemStoneHistory, GemStoneSecondLink
 
 } from './styled'
 import image from '../../assets/images/916213.jpg'
 import image2 from '../../assets/images/916247.jpg'
+import SynopsisNavigation from '../../components/SynopsisNavigation'
 
 const Information = () => {
   const {themeColor} = useOutletContext();
@@ -27,43 +28,27 @@ const Information = () => {
                           Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
                           sed do eiusmod tempor incididunt ut labore et dolore.
                         </GemStoneDescription>
-                0        <GemStoneLink to="/">
+                        <GemStoneLink to="/">
                           ver mas
                         </GemStoneLink>
                   </GemStoneSynopsis>
+                  <GemStoneHistory>
+                      <GemStoneTitle>
+                        <strong>Soul</strong> Gem Synopsis
+                        </GemStoneTitle>
+                      <GemStoneDescription>
+                          Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
+                          sed do eiusmod tempor incididunt ut labore et dolore.
+                        </GemStoneDescription>
+                        <GemStoneSecondLink to="/">
+                          ver mas
+                        </GemStoneSecondLink>
+                  </GemStoneHistory>
               </GemStoneDetails>
           </GemStoneWrapper>
-          <GemStoneWrapper backgroundimage={image2}>
-              <GemStoneImageWrapper>
-                <GemStoneImage src={image} alt="gemstone1" />
-              </GemStoneImageWrapper>
-          </GemStoneWrapper>
-          <GemStoneWrapper backgroundimage={image2}>
-              <GemStoneImageWrapper>
-                <GemStoneImage src={image} alt="gemstone1" />
-              </GemStoneImageWrapper>
-          </GemStoneWrapper>
-          <GemStoneWrapper backgroundimage={image2}>
-              <GemStoneImageWrapper>
-                <GemStoneImage src={image} alt="gemstone1" />
-              </GemStoneImageWrapper>
-          </GemStoneWrapper>
-          <GemStoneWrapper backgroundimage={image2}>
-              <GemStoneImageWrapper>
-                <GemStoneImage src={image} alt="gemstone1" />
-              </GemStoneImageWrapper>
-          </GemStoneWrapper>
-          <GemStoneWrapper backgroundimage={image2}>
-              <GemStoneImageWrapper>
-                <GemStoneImage src={image} alt="gemstone1" />
-              </GemStoneImageWrapper>
-          </GemStoneWrapper>
-          <GemStoneWrapper backgroundimage={image2}>
-              <GemStoneImageWrapper>
-                <GemStoneImage src={image} alt="gemstone1" />
-              </GemStoneImageWrapper>
-          </GemStoneWrapper>
+          
       </SynopsisChild>
+      <SynopsisNavigation/>
       <Outlet/>
   
     

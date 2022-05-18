@@ -1,42 +1,13 @@
 import styled, { keyframes } from 'styled-components'
 import {Link } from 'react-router-dom';
-import Slider from 'react-slick';
+
 
 export const SynopsisChild = styled.div`
     height: 100vh;
     padding-bottom:81px;
     background-color: ${props => props.themeColor};
 `
-export const SynopsisNavigation = styled(Slider)`
-    position: absolute;
-    bottom:0;
-    left:122px;
-    width: calc(100% - 162px - 40px - 40px - 2px);
-    height: 81px;
-    backdrop-filter: blur(18px);
-    border-right: 1px solid #99999950;
-    border-left: 1px solid #99999950;
-    border-top: 1px solid #99999950;
-`
-export const CustomPaginationElement = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-`
-export const CustomPaginationElementLink = styled(Link)`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color:white;
-    text-transform: uppercase;
-    font-size: 14px;
-    
-`
+
 export const GemStoneWrapper = styled.div`
     background-image: ${props => `url(${props.backgroundimage})`};
     height: 100vh;
@@ -54,38 +25,15 @@ export const GemStoneImage = styled.img`
     height: 100px;
 `
 
-export const SlideButtonLeft = styled.button`
-    position: absolute;
-    bottom:0;
-    top:unset;
-    left: 40px;
-    z-index: 999;
-    right:unset;
-    width: 40px;
-    height: 60px;
-    background-color: transparent;
-    color: white;
-    transition: 0.2s ease-in-out;
-`
-export const SlideButtonRight = styled.button`
-    position: absolute;
-    bottom:0;
-    top:unset;
-    left: 82px;
-    z-index: 999;
-    right:unset;
-    width: 40px;
-    height: 60px;
-    background-color: transparent;
-    color: white;
-    transition: 0.2s ease-in-out;
-`    
+
 
 export const GemStoneDetails = styled.div`
- 
+   width:100%; 
    height:100%;
    max-height: 100%;
    position: relative;
+   display: flex;
+   justify-content: space-between;
 `
 export const GemStoneSynopsis = styled.div`
     background-color: #2020208a;
@@ -94,6 +42,7 @@ export const GemStoneSynopsis = styled.div`
     position: relative;   
     margin:50px;
     z-index: 10;
+    max-height:150px;
     &:before{
         content: '';
         position: absolute;
@@ -104,6 +53,7 @@ export const GemStoneSynopsis = styled.div`
         background-color: orange;
     }
 `
+
 export const GemStoneTitle = styled.div`
     text-transform: uppercase;
     font-size:20px;
@@ -151,7 +101,7 @@ export const GemStoneLink = styled(Link)`
     }
     &:after{
         content:"";
-        top:0;
+        top:-2px;
         left:0;
         width: 0;
         height: 100%;
@@ -164,4 +114,20 @@ export const GemStoneLink = styled(Link)`
        width: 100%;
     }
     
+`
+export const GemStoneHistory = styled(GemStoneSynopsis)`
+    align-self: flex-end;   
+    &:before{
+        background-color: #d2d2d2;
+    }
+`
+export const GemStoneSecondLink = styled(GemStoneLink)`
+    border-image-source: linear-gradient(
+      to right, 
+      #d2d2d2, 
+      #d2d2d2
+    );
+    &:after{
+        background: linear-gradient(90deg,#d2d2d2 0%, #a5a5a5 100%);
+    }
 `
