@@ -1,0 +1,25 @@
+.slick-slider{
+    position: relative;
+}
+.slick-dots-synopsis{
+    position: absolute;
+    bottom:0px;
+    left:121px;
+    width: 100%;
+    text-align: center;
+    z-index: 50;
+    max-width: calc(100% - 162px - 40px - 40px);
+    border:1px solid red;
+    height: 80px;
+    border-top: 1px solid #99999950;
+    border-left: 1px solid #99999950;
+    border-right: 1px solid #99999950;
+    backdrop-filter: blur(18px);
+    display: flex!important;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.slick-dots-synopsis li {
+    width: 16.7%;
+    height: 100%;
+}

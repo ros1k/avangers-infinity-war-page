@@ -4,25 +4,23 @@ import {Link } from 'react-router-dom';
 
 export const SynopsisChild = styled.div`
     height: 100vh;
-    padding-bottom:81px;
+    padding:81px;
     background-color: ${props => props.themeColor};
 `
 
-export const GemStoneWrapper = styled.div`
+export const Wrapper = styled.div`
     background-image: ${props => `url(${props.backgroundimage})`};
-    background-blend-mode: color-burn;
     background-size: cover;
-
-    height: 100vh;
-    padding: 80px 80px 80px 80px;
+    height: 100%;
+    /* padding: 80px 80px 80px 80px; */
     width: 100%;
     position: relative;
     display: flex!important;
+    justify-content: space-between;
    
 `
 export const GemStoneImageWrapper = styled.div`
     display:none;
-    position: absolute;
 `
 export const GemStoneImage = styled.img`
     width: 100px;
@@ -37,7 +35,7 @@ export const GemStoneDetails = styled.div`
    display: flex;
    justify-content: space-between;
 `
-export const GemStoneSynopsis = styled.div`
+export const DescriptionWrapper  = styled.div`
     background-color: #2020208a;
     max-width: 400px;
     padding: 20px 30px;
@@ -45,6 +43,7 @@ export const GemStoneSynopsis = styled.div`
     margin:50px;
     z-index: 10;
     max-height:150px;
+    ${props => props.alignSelf ? `align-self: ${props.alignSelf}` : ''};
     &:before{
         content: '';
         position: absolute;
@@ -56,12 +55,12 @@ export const GemStoneSynopsis = styled.div`
     }
 `
 
-export const GemStoneTitle = styled.div`
+export const DescriptionTitle = styled.div`
     text-transform: uppercase;
     font-size:20px;
     margin-bottom: 20px;
 `
-export const GemStoneDescription = styled.p`
+export const DescriptionText = styled.p`
     font-size:12px;
     margin-bottom: 20px;
 `
@@ -74,7 +73,7 @@ export const LinkHoverAnimation = keyframes`
     }  
 `
 
-export const GemStoneLink = styled(Link)`
+export const DescriptionLink = styled(Link)`
     text-transform: uppercase;
     color:white;
     font-size:14px;
@@ -117,13 +116,13 @@ export const GemStoneLink = styled(Link)`
     }
     
 `
-export const GemStoneHistory = styled(GemStoneSynopsis)`
+export const GemStoneHistory = styled(Wrapper)`
     align-self: flex-end;   
     &:before{
         background-color: #d2d2d2;
     }
 `
-export const GemStoneSecondLink = styled(GemStoneLink)`
+export const GemStoneSecondLink = styled(DescriptionLink)`
     border-image-source: linear-gradient(
       to right, 
       #d2d2d2, 
@@ -142,7 +141,7 @@ export const GauntletDetails = styled(GemStoneDetails)`
     height: 100%;
 
 `
-export const GauntletSynopsis = styled(GemStoneSynopsis)`
+export const GauntletSynopsis = styled(Wrapper)`
     align-self: flex-end;
     background-color: transparent;
     width: 350px;
@@ -162,7 +161,7 @@ export const GauntletLink = styled(Link)`
     font-size:12px;
 `
 export const GauntletSecondLink = styled(GauntletLink)``
-export const GauntletTitle = styled(GemStoneTitle)`
+export const GauntletTitle = styled(DescriptionTitle)`
     margin-bottom: 33px;
     font-size:18px;
     margin-left: 10px;
@@ -179,7 +178,7 @@ export const GauntletTitle = styled(GemStoneTitle)`
     }
    
 `
-export const GauntletDescription = styled(GemStoneDescription)`
+export const GauntletDescription = styled(DescriptionText)`
     position: relative;
      &:after{
         content: '';
