@@ -128,6 +128,13 @@ export const SlideButtonLeft = styled.button`
     }
     &:active,&:focus{
         color:white;
+        background-color: ${props => props.themecolor };
+    }
+    &:active:hover,&:focus:hover{
+        &:hover{
+        color:white;
+        background-color: black;
+        }
     }
 
 `
@@ -152,6 +159,13 @@ export const SlideButtonRight = styled.button`
     }
     &:active,&:focus{
         color:white;
+        background-color: black;
+    }
+    &:active:hover,&:focus:hover{
+        &:hover{
+        color:white;
+        background-color: ${props => props.themecolor };
+        }
     }
 `
 export const CircleAnimation = keyframes`

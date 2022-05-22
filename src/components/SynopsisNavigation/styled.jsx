@@ -4,12 +4,11 @@ import styled from 'styled-components';
 
 export const SynopsisNavigationWrapper = styled(Slider)`
     bottom:0;
-    left:122px;
-    width: calc(100% - 162px - 40px - 40px - 2px);
+    left:82px;
+    width: calc(100% - 162px - 2px);
     height: 81px;
+    padding: 0 40px;
     backdrop-filter: blur(18px);
-    border-right: 1px solid #99999950;
-    border-left: 1px solid #99999950;
     border-top: 1px solid #99999950;
     position: absolute!important;
 `
@@ -37,18 +36,19 @@ export const CustomPaginationElementLink = styled(Link)`
 `
 
 export const SlideButtonLeft = styled.button`
+ 
     position: absolute;
     top: unset;
     right:unset;
     bottom:-39px;
-    left: -41px;
+    left: 0;
     z-index: 999;
     width: 40px;
     height: 80px;
-    background-color: transparent;
     color: white;
     transition: 0.2s ease-in-out;
-    border-top:1px solid #99999950;
+    border-right:1px solid #99999950;
+ 
     &:before{
         content:"";
         display: none;
@@ -59,6 +59,8 @@ export const SlideButtonLeft = styled.button`
     }
 `
 export const SlideButtonRight = styled(SlideButtonLeft)`
-    right: -41px;
+    right: 0px;
     left: unset;
+    border-right:none;
+    border-left:1px solid #99999950;
 `   
