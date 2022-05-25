@@ -214,7 +214,7 @@ export const ProgressRoundWrap = styled.div`
                 animation: ${BackgroundCircle} 2s linear forwards;
             }
             .progress-circle {
-                animation: ${CircleAnimation} 10s linear;
+                animation: ${CircleAnimation} 18s linear;
             }
         }
         

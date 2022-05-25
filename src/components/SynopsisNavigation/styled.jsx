@@ -19,6 +19,9 @@ export const CustomPaginationElement = styled.div`
     align-items: center;
     height: 100%;
     width: 100%;
+    &.active{
+        background-color: #f5f5f5;
+    }
 `
 export const CustomPaginationElementLink = styled(Link)`
     width: 100%;

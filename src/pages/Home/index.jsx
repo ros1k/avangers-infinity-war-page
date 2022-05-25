@@ -1,8 +1,8 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Layout from '../../Layout'
 import Slider from "react-slick";
 import Image3 from '../../assets/images/wallpaperflare.com_wallpaper2.jpg'
-import Image1 from '../../assets/images/avengers-infinity-war-wallpaper.jpeg'
+import Image1 from '../../assets/images/95494.jpg'
 import Image5 from '../../assets/images/wallpaperflare.com_wallpaper4.jpg'
 import Image2 from '../../assets/images/wallpaperflare.com_wallpaper1.jpg'
 import Image4 from '../../assets/images/wallpaperflare.com_wallpaper3.jpg'
@@ -60,8 +60,8 @@ const Home = () => {
     },
     dots: true,
     infinite: true,
-    speed: 2000,
-    autoplaySpeed: 5000,
+    speed: 2500,
+    autoplaySpeed: 8000,
     autoplay: true,
     pauseOnHover: false,
     arrows:true,
@@ -77,6 +77,7 @@ const Home = () => {
  
     }
   }
+
 
   return (
     <>

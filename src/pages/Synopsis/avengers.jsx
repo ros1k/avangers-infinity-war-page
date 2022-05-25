@@ -1,22 +1,20 @@
 import React from 'react'
-import { GauntletDetails, GauntletSynopsis, GauntletTitle, GauntletDescription, 
-    GauntletLink, GauntletHistory, GauntletSecondLink } from './styled'
-import image from '../../assets/images/gauntlet.jpg'
 import SynopsisNavigation from '../../components/SynopsisNavigation'
+import { GauntletDetails, GauntletSynopsis, GauntletTitle, GauntletDescription, 
+GauntletLink, GauntletHistory, GauntletSecondLink } from './styled'
+import image from '../../assets/images/248142.jpg'
 
-
-const Gauntlet = () => {
+const Avengers = () => {
   return (
-    <> 
-    <GauntletDetails bgImage={image}>
+    <>
+        <GauntletDetails bgImage={image}>
         <GauntletSynopsis>
             <GauntletTitle>
-            <strong>Power</strong> Gauntlet
+            <strong>Avengers</strong> Synopsis
             </GauntletTitle>
             <GauntletDescription>
-                Thaons onsectetur adipisicing elit. sed do eiusmod tempor cididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitatiion ullamconyst laboris nisiut aliquip ex ea commodo consequat. 
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
+                sed do eiusmod tempor incididunt ut labore et dolore.
             </GauntletDescription>
             <GauntletLink to="/">
                 ver mas
@@ -24,7 +22,7 @@ const Gauntlet = () => {
         </GauntletSynopsis>
         <GauntletHistory>
             <GauntletTitle>
-            <strong>Soul</strong> Gem Synopsis
+            <strong>Avengers</strong> History
             </GauntletTitle>
             <GauntletDescription>
                 Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
@@ -34,10 +32,10 @@ const Gauntlet = () => {
                 ver mas
             </GauntletSecondLink>
         </GauntletHistory>
-    </GauntletDetails>
-   
-</>
+        </GauntletDetails>
+       
+    </>
   )
 }
 
-export default Gauntlet
+export default Avengers

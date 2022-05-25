@@ -23,6 +23,8 @@ body {
 }
 main{
   overflow: hidden;
+  position: relative;
+  height: 100vh;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

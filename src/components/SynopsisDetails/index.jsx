@@ -1,17 +1,18 @@
-import React from 'react'
+import React , {useEffect } from 'react'
 import Description from './description'
 import { Wrapper } from './styled'
+   
 
-const index = () => {
+const SynopsisDetails = () => {
 
   return (
     <>
         <Wrapper>
-            <Description title={`<strong>Soul</strong> Gem Synopsis` } />
-            <Description title={`<strong>Stone</strong> History`} alignSelf="flex-end"/>
+            <Description data-aos="fade-right" data-aos-delay="3" title={`<strong>Soul</strong> Gem Synopsis` } />
+            <Description data-aos="fade-left" title={`<strong>Stone</strong> History`} alignSelf="flex-end"/>
         </Wrapper>
     </>
   )
 }
 
-export default index
+export default SynopsisDetails

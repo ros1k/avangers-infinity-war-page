@@ -137,9 +137,13 @@ export const GauntletDetails = styled(GemStoneDetails)`
     padding: 80px;
     display: flex;
     min-height: 100%;
+    padding-bottom:100px;
     align-items: flex-start;
+    justify-content: space-around;
     flex-direction: row;
     height: 100%;
+    background-position: center;
+    background-image: url(${props => props.bgImage});
 
 `
 export const GauntletSynopsis = styled(GemStoneSynopsis)`
@@ -147,13 +151,14 @@ export const GauntletSynopsis = styled(GemStoneSynopsis)`
     background-color: transparent;
     width: 350px;
     padding:0;
+   
     &:before{
         display: none;
     }
 `
 export const GauntletHistory = styled(GauntletSynopsis)`
     
-   
+    margin-left: 200px;
 `
 export const GauntletLink = styled(Link)`
     text-decoration:none;
@@ -171,10 +176,10 @@ export const GauntletTitle = styled(GemStoneTitle)`
         content:"";
         position: absolute;
         top:-2px;
-        left:0;
+        left:-10px;
         width: 150px;
-        height: 14px;
-        background-color: #2020208a;
+        height: 16px;
+        background-color: #25252544;
         z-index: -1;
     }
    

@@ -5,23 +5,26 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
 import Home from './pages/Home';
 import Synopsis from './pages/Synopsis';
-import Information from './pages/Synopsis/information';
-
-
+import Gems from './pages/Synopsis/gems';
+import Gauntlet from './pages/Synopsis/gauntlet';
+import Avengers from 'pages/Synopsis/avengers';
 import './index.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
   
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="synopsis" element={<Synopsis />}>
-              <Route path=":informationId" element={<Information />} />
+              <Route index element={<Avengers/>} />
+              <Route path="gauntlet" element={<Gauntlet />}/>
+              <Route path=":gems" element={<Gems />} />
             </Route>
               {/* <Route path="cast" element={<Cast />}>
                 <Route path=":memberId" element={<Member />} />

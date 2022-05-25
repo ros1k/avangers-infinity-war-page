@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import LeftSideBar from '../components/SideBar/LeftSideBar'
 import RightSideBar from '../components/SideBar/RightSideBar'
 import styled from 'styled-components'
+        
 
 const TopWrapper = styled.div`
     position: absolute;
@@ -11,6 +12,7 @@ const TopWrapper = styled.div`
 `
 
 const Layout = ({children}) =>{
+  
     return(
         <>
         <TopWrapper>
