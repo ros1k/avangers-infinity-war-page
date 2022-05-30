@@ -46,3 +46,36 @@ code {
   z-index: 9999;
   transition: 0.3s ease;
 }
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+  
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
+}
+.ReactModal__Content{
+  width: 600px;
+  height: 600px;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto;
+  z-index: 10;
+  border: 1px solid #80808033;
+  background-color: #00000088;
+  transition: 0.3s ease;
+  transform: translate(0,80px);
+}
+.ReactModal__Content--after-open{
+  transform: translate(0,0);
+        transition: 0.3s ease;
+}

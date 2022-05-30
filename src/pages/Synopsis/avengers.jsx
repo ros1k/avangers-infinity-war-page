@@ -6,20 +6,16 @@ import image from '../../assets/images/248142.jpg'
 const Avengers = () => {
     const [modalIsOpen, setIsOpen] = React.useState(false);
     const refModal = React.useRef();
-    const [modalClass, setModalClass] = React.useState('');
+ 
     function openModal() {
         setIsOpen(true);
-        setModalClass(refModal.current.props.className);
+      
     }
 
     function afterOpenModal() {
         // references are now sync'd and can be accessed.
         
-        console.log(refModal.current.props.isOpen );
-        if( refModal.current.props.isOpen) {
-            console.log(refModal.current.props.className)
-            refModal.current.props.className = modalClass + ' modal-open';
-        }
+    
         
     }
 

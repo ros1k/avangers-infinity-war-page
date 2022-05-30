@@ -203,21 +203,8 @@ export const GauntletDescription = styled(GemStoneDescription)`
     }
 `
 export const StyledModal = styled(Modal)`
-    width: 600px;
-    height: 600px;
-    display: flex;
-    padding: 30px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 80px auto;
-    z-index: 10;
-    border: 1px solid #80808033;
-    background-color: #00000088;
-    transition: 0.3s ease;
-    transform: translate(0,80px);
+   
     &.modal-open{
-        transform: translate(0,0);
-        transition: 0.3s ease;
+      
     }
 `
