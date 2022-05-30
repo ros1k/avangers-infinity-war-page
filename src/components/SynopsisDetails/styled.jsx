@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import {Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 
 export const SynopsisChild = styled.div`
@@ -73,7 +73,7 @@ export const LinkHoverAnimation = keyframes`
     }  
 `
 
-export const DescriptionLink = styled(Link)`
+export const DescriptionButton = styled.button`
     text-transform: uppercase;
     color:white;
     font-size:14px;
@@ -90,6 +90,9 @@ export const DescriptionLink = styled(Link)`
       #ff6f00
     );
     padding: 10px 50px;
+    background-color: transparent;
+    text-align: left;
+    cursor:pointer;
     &:before{
         content:"";
         position: absolute;
@@ -122,7 +125,7 @@ export const GemStoneHistory = styled(Wrapper)`
         background-color: #d2d2d2;
     }
 `
-export const GemStoneSecondLink = styled(DescriptionLink)`
+export const GemStoneSecondLink = styled(DescriptionButton)`
     border-image-source: linear-gradient(
       to right, 
       #d2d2d2, 
@@ -154,7 +157,7 @@ export const GauntletHistory = styled(GauntletSynopsis)`
     
    
 `
-export const GauntletLink = styled(Link)`
+export const GauntletLink = styled.button`
     text-decoration:none;
     color:white;
     text-transform: uppercase ;
@@ -189,4 +192,12 @@ export const GauntletDescription = styled(DescriptionText)`
         width: 30px;
         background-color: orange;
     }
+`
+export const StyledModal = styled(Modal)`
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 `

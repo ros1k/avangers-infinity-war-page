@@ -1,11 +1,26 @@
 import React from 'react'
 import { GauntletDetails, GauntletSynopsis, GauntletTitle, GauntletDescription, 
-    GauntletLink, GauntletHistory, GauntletSecondLink } from './styled'
+    GauntletButton, GauntletHistory, GauntletSecondButton, StyledModal } from './styled'
 import image from '../../assets/images/gauntlet.jpg'
-import SynopsisNavigation from '../../components/SynopsisNavigation'
+
 
 
 const Gauntlet = () => {
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+       
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+    
   return (
     <> 
     <GauntletDetails bgImage={image}>
@@ -18,9 +33,9 @@ const Gauntlet = () => {
                 Ut enim ad minim veniam, quis nostrud exercitatiion ullamconyst laboris nisiut aliquip ex ea commodo consequat. 
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             </GauntletDescription>
-            <GauntletLink to="/">
+            <GauntletButton onClick={openModal} >
                 ver mas
-            </GauntletLink>
+            </GauntletButton>
         </GauntletSynopsis>
         <GauntletHistory>
             <GauntletTitle>
@@ -30,10 +45,28 @@ const Gauntlet = () => {
                 Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
                 sed do eiusmod tempor incididunt ut labore et dolore.
             </GauntletDescription>
-            <GauntletSecondLink to="/">
+            <GauntletSecondButton onClick={openModal}>
                 ver mas
-            </GauntletSecondLink>
+            </GauntletSecondButton>
         </GauntletHistory>
+        <StyledModal
+              isOpen={modalIsOpen}
+              onAfterOpen={afterOpenModal}
+              onRequestClose={closeModal}
+              ariaHideApp={false}
+              contentLabel="Example Modal"
+            >
+            
+              <button onClick={closeModal}>close</button>
+              <div>I am a modal</div>
+              <form>
+                <input />
+                <button>tab navigation</button>
+                <button>stays</button>
+                <button>inside</button>
+                <button>the modal</button>
+              </form>
+            </StyledModal>
     </GauntletDetails>
    
 </>

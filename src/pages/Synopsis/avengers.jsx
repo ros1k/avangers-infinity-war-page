@@ -1,10 +1,33 @@
 import React from 'react'
-import SynopsisNavigation from '../../components/SynopsisNavigation'
 import { GauntletDetails, GauntletSynopsis, GauntletTitle, GauntletDescription, 
-GauntletLink, GauntletHistory, GauntletSecondLink } from './styled'
+GauntletButton, GauntletHistory, GauntletSecondButton ,StyledModal } from './styled'
 import image from '../../assets/images/248142.jpg'
 
 const Avengers = () => {
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const refModal = React.useRef();
+    const [modalClass, setModalClass] = React.useState('');
+    function openModal() {
+        setIsOpen(true);
+        setModalClass(refModal.current.props.className);
+    }
+
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        
+        console.log(refModal.current.props.isOpen );
+        if( refModal.current.props.isOpen) {
+            console.log(refModal.current.props.className)
+            refModal.current.props.className = modalClass + ' modal-open';
+        }
+        
+    }
+
+    function closeModal() {
+     
+        setIsOpen(false);
+    }
+    
   return (
     <>
         <GauntletDetails bgImage={image}>
@@ -16,9 +39,9 @@ const Avengers = () => {
                 Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
                 sed do eiusmod tempor incididunt ut labore et dolore.
             </GauntletDescription>
-            <GauntletLink to="/">
+            <GauntletButton onClick={openModal} >
                 ver mas
-            </GauntletLink>
+            </GauntletButton>
         </GauntletSynopsis>
         <GauntletHistory>
             <GauntletTitle>
@@ -28,10 +51,29 @@ const Avengers = () => {
                 Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
                 sed do eiusmod tempor incididunt ut labore et dolore.
             </GauntletDescription>
-            <GauntletSecondLink to="/">
+            <GauntletSecondButton onClick={openModal} >
                 ver mas
-            </GauntletSecondLink>
+            </GauntletSecondButton>
         </GauntletHistory>
+        <StyledModal
+            ref={refModal}
+            isOpen={modalIsOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            ariaHideApp={false}
+            contentLabel="Example Modal"
+            overlayClassName='modalOverlay'
+            >
+             <GauntletTitle>
+                <strong>Avengers</strong> Synopsis
+            </GauntletTitle>
+            <GauntletDescription>
+                Infinity War orange sponser designer caracas, consectetur adipiscing elit. 
+                sed do eiusmod tempor incididunt ut labore et dolore.
+            </GauntletDescription>
+              <button onClick={closeModal}>close</button>
+              
+            </StyledModal>
         </GauntletDetails>
        
     </>

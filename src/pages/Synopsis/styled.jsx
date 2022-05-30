@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import {Link } from 'react-router-dom';
-
+import Modal from 'react-modal';
 
 export const SynopsisChild = styled.div`
     height: 100vh;
@@ -74,7 +74,7 @@ export const LinkHoverAnimation = keyframes`
     }  
 `
 
-export const GemStoneLink = styled(Link)`
+export const GemStoneButton = styled.button`
     text-transform: uppercase;
     color:white;
     font-size:14px;
@@ -123,7 +123,7 @@ export const GemStoneHistory = styled(GemStoneSynopsis)`
         background-color: #d2d2d2;
     }
 `
-export const GemStoneSecondLink = styled(GemStoneLink)`
+export const GemStoneSecondLink = styled(GemStoneButton)`
     border-image-source: linear-gradient(
       to right, 
       #d2d2d2, 
@@ -160,13 +160,19 @@ export const GauntletHistory = styled(GauntletSynopsis)`
     
     margin-left: 200px;
 `
-export const GauntletLink = styled(Link)`
+export const GauntletButton = styled.button`
     text-decoration:none;
     color:white;
     text-transform: uppercase ;
     font-size:12px;
+    width: 100px;
+    background-color: transparent;
+    padding: 10px 0;
+    border:none;
+    text-align: left;
+    cursor:pointer;
 `
-export const GauntletSecondLink = styled(GauntletLink)``
+export const GauntletSecondButton = styled(GauntletButton)``
 export const GauntletTitle = styled(GemStoneTitle)`
     margin-bottom: 33px;
     font-size:18px;
@@ -194,5 +200,24 @@ export const GauntletDescription = styled(GemStoneDescription)`
         height: 3px;
         width: 30px;
         background-color: orange;
+    }
+`
+export const StyledModal = styled(Modal)`
+    width: 600px;
+    height: 600px;
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    z-index: 10;
+    border: 1px solid #80808033;
+    background-color: #00000088;
+    transition: 0.3s ease;
+    transform: translate(0,80px);
+    &.modal-open{
+        transform: translate(0,0);
+        transition: 0.3s ease;
     }
 `
