@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import Modal from 'react-modal';
+
 
 
 export const SynopsisChild = styled.div`
@@ -192,12 +192,4 @@ export const GauntletDescription = styled(DescriptionText)`
         width: 30px;
         background-color: orange;
     }
-`
-export const StyledModal = styled(Modal)`
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
 `

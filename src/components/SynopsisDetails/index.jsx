@@ -1,4 +1,4 @@
-import React , {useEffect } from 'react'
+import React  from 'react'
 import Description from './description'
 import { Wrapper } from './styled'
 

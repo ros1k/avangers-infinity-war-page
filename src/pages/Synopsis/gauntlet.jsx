@@ -55,6 +55,7 @@ const Gauntlet = () => {
               onRequestClose={closeModal}
               ariaHideApp={false}
               contentLabel="Example Modal"
+              overlayClassName='modalOverlay'
             >
             
               <button onClick={closeModal}>close</button>

@@ -3,25 +3,30 @@ import { DescriptionWrapper,
   DescriptionTitle, 
   DescriptionText, 
   DescriptionButton,
-  StyledModal,
   } from './styled'
 import Modal from 'react-modal';
 
 const Description = ({alignSelf}) => {
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const refModal = React.useRef();
+  const customStyles = {
+  }
+  function openModal() {
+      setIsOpen(true);
+    
+  }
 
-    function openModal() {
-        setIsOpen(true);
-    }
+  function afterOpenModal() {
+      // references are now sync'd and can be accessed.
+      
+  
+      
+  }
 
-    function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-       
-    }
-
-    function closeModal() {
-        setIsOpen(false);
-    }
+  function closeModal() {
+   
+      setIsOpen(false);
+  }
     
     return (
    <>
@@ -36,12 +41,15 @@ const Description = ({alignSelf}) => {
             <DescriptionButton onClick={openModal}>
                 ver mas
             </DescriptionButton>
-            <StyledModal
-              isOpen={modalIsOpen}
-              onAfterOpen={afterOpenModal}
-              onRequestClose={closeModal}
-              ariaHideApp={false}
-              contentLabel="Example Modal"
+            <Modal
+                   ref={refModal}
+                   isOpen={modalIsOpen}
+                   onAfterOpen={afterOpenModal}
+                   onRequestClose={closeModal}
+                   ariaHideApp={false}
+                   style={customStyles}
+                   contentLabel="Example Modal"
+                   overlayClassName='modalOverlay'
             >
             
               <button onClick={closeModal}>close</button>
@@ -53,7 +61,7 @@ const Description = ({alignSelf}) => {
                 <button>inside</button>
                 <button>the modal</button>
               </form>
-            </StyledModal>
+            </Modal>
         </DescriptionWrapper>
    </>
   )

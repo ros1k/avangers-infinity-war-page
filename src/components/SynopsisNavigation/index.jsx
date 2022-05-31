@@ -5,10 +5,10 @@ import { SynopsisNavigationWrapper, CustomPaginationElement, CustomPaginationEle
 
 import { faAngleLeft,faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import './customSlider.css'
-import { useLocation } from 'react-router-dom';
+
 
 const SynopsisNavigation = () => { 
-    const currentLocation = useLocation();
+  
 
     const [currnetSlide, setCurrentSlide] = React.useState(0);
     const sliderRef = useRef(null);

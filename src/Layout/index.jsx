@@ -11,13 +11,13 @@ const TopWrapper = styled.div`
     z-index: 999;
 `
 
-const Layout = ({children}) =>{
+const Layout = ({children, hide}) =>{
   
     return(
         <>
         <TopWrapper>
             <Header/>
-            <LeftSideBar/>
+            <LeftSideBar hide={hide}/>
             <RightSideBar/>
         </TopWrapper>
         <main>

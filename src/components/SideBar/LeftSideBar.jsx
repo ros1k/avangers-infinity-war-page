@@ -53,8 +53,10 @@ const BottomText = styled.p`
     letter-spacing: 2px;
     font-weight: 500;
     font-size:14px;
+    display:${props => props.hide ? 'none' : 'inline-block'};
+
 `
-const LeftSideBar = () => {
+const LeftSideBar = ({hide}) => {
   return (
     <SideBarWrapper>
        <SocialMediaList>
@@ -74,7 +76,7 @@ const LeftSideBar = () => {
                 </SocialMediaLink>
             </SocialMediaIcon>
        </SocialMediaList>
-       <BottomText>Share</BottomText>
+       <BottomText hide={hide}>Share</BottomText>
     </SideBarWrapper>
   )
 }

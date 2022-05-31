@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components'
-import {Link } from 'react-router-dom';
 import Modal from 'react-modal';
 
 export const SynopsisChild = styled.div`
