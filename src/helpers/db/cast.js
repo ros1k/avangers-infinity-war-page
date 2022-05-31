@@ -1,5 +1,5 @@
 // Json file with Description of the data about Avengers and their powers
-export const avengers = {
+export const castAvengers = {
     "Avengers": [
         {
             "name": "Thanos",
