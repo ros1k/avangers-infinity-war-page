@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import Layout from '../../Layout'
 import Slider from "react-slick";
 import Image3 from '../../assets/images/wallpaperflare.com_wallpaper2.jpg'
