@@ -17,24 +17,12 @@ export const Item = styled.li`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  width: 250px;
-  height: 150px;
+  height: 100%;
   padding: 20px 0 20px 25px;
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  /* &:before{ 
-   
-  }
-  &:first-child div{// active class change later
-    background: linear-gradient(90deg, ${props => props.colorTheme + 'dd'} 0%, rgba(0,0,0,0) 110%);
-  }
-  &:hover:before{
-    animation-play-state: running;
-    animation-direction: reverse;
-    animation: ${hoverItemAnimation} 2s linear;
-    /* background: linear-gradient(90deg, ${props => props.colorTheme + 'dd'} 0%, rgba(0,0,0,0) 110%); */
 
   &:after{
     content:"";
@@ -127,9 +115,7 @@ export const ItemName = styled.h3`
   font-weight: 400;
   z-index: 1;
 `
-const CastNavItem = ({colorThemeType,colorTheme,colorGradient,name,image,className}) => {
-  
-  
+const CastSliderDots = ({colorThemeType,colorTheme,colorGradient,name,image,className}) => {
   
   return (
     <Item 
@@ -146,4 +132,4 @@ const CastNavItem = ({colorThemeType,colorTheme,colorGradient,name,image,classNa
   )
 }
 
-export default CastNavItem
+export default CastSliderDots

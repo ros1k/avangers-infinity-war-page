@@ -3,7 +3,7 @@ export const castAvengers = {
     "Avengers": [
         {
             "name": "Thanos",
-            "description" : "",
+            "description" : `The Thanos unde omnis iste natus error sit voluiptatem aquae ab illo invetore veritatis et quasi architecto beatae vitae dicta sunt explicabo Aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt, Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius . Modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?`,
             "description_full" : "",
             "description_image" : "",
             "navImage": "https://i.annihil.us/u/prod/marvel/i/mg/6/20/5232158ed8a6b/standard_xlarge.jpg",
