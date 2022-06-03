@@ -9,7 +9,8 @@ import {castAvengers} from '../helpers/db/cast'
     const [colorGradient, setColorGradient] = useState("");
  
     const [currentSlide, setCurrentSlide] = useState(0);
-  
+    const [currentSubPage, setCurrentSubPage] = useState(0);
+    const [subPages,setSubPages] = useState(['Summary','History','Poster','Design']);
     useEffect(() => {
         setColorThemeType(castAvengers.Avengers[0].colorThemeType)
         setColorTheme(castAvengers.Avengers[0].colorTheme)
@@ -33,6 +34,9 @@ import {castAvengers} from '../helpers/db/cast'
                 colorGradient,
                 changeColorTheme,
                 currentSlide,
+                currentSubPage,
+                setCurrentSubPage,
+                subPages,
             }}>
             {children}
         </CastContext.Provider>

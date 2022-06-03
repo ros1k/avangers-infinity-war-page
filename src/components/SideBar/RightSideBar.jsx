@@ -1,6 +1,9 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { CastContext } from '../../context/castContext'
 
+import CastNavList from './CastNavList'
 
 const SideBarWrapper = styled.div`
     display: flex;
@@ -19,41 +22,24 @@ const SideBarWrapper = styled.div`
     padding-top:82px;
 
 `
-export const CastNavList = styled.ul`
-    list-style: none;
-    padding: 0; 
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-`
-export const CastNavItem = styled.li`
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    display: flex;
-    flex-grow: 1;
-    text-transform: uppercase;
-    font-weight: 400;
-    justify-content: center;
-    letter-spacing: 2px;
-    font-size:14px;
-`
+
+
 
 const RightSideBar = ({showButtons}) => {
+  const values = useContext(CastContext);
+  const { colorThemeType,colorTheme,colorGradient,currentSubPage,setCurrentSubPage } = values;
+  
+  const handleClick = (e) => {
+    e.preventDefault();
+    setCurrentSubPage(e.target.attributes[0].value);
+    e.current.classList.add('active');
+  }
+
+
   return (
     <SideBarWrapper>
       {showButtons &&
-        
-          <CastNavList>
-            <CastNavItem>Summary</CastNavItem>
-            <CastNavItem>History</CastNavItem>
-            <CastNavItem>Poster</CastNavItem>
-            <CastNavItem>design</CastNavItem>
-          </CastNavList>
-        
-
-
+          <CastNavList/>
       }
     </SideBarWrapper>
 
