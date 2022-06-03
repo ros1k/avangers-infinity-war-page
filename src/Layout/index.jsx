@@ -11,14 +11,15 @@ const TopWrapper = styled.div`
     z-index: 999;
 `
 
-const Layout = ({children, hide}) =>{
-  
+const Layout = ({children, hide=false, showButtons=false}) =>{
+
+
     return(
         <>
         <TopWrapper>
             <Header/>
             <LeftSideBar hide={hide}/>
-            <RightSideBar/>
+            <RightSideBar showButtons={showButtons}/>
         </TopWrapper>
         <main>
             {children}
