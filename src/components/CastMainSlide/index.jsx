@@ -4,6 +4,10 @@ import styled from 'styled-components'
 export const CastMainSlideWrapper = styled.div`
     padding:120px 0 0 80px;
     background-image: url(${props => props.image});
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
 `
 export const CastName = styled.h2`
     font-size: 80px;
@@ -29,16 +33,25 @@ export const CastDescription = styled.p`
     text-align: justify;
     margin-bottom: 30px;
 `
-const CastMainSlide = ({name,desc,image}) => {
+export const DescImage = styled.img`
+    z-index: -1;
+    height: 80vh;
+`
+const CastMainSlide = ({name,desc,descImage}) => {
     const checkDots = desc.split('.');
-    
+   
   return (
-    <CastMainSlideWrapper image={image}>
-        <CastName>{name}</CastName>
-        {checkDots.map((item,index)=>{
-            return <CastDescription key={index}>{item}.</CastDescription>
-        })}
-       
+    <CastMainSlideWrapper >
+        <div>
+            <CastName>{name}</CastName>
+            {checkDots.map((item,index)=>{
+                return <CastDescription key={index}>{item}.</CastDescription>
+            })}
+        </div>
+        
+       <DescImage src={descImage} 
+            alt={name + " image"} 
+           />
     </CastMainSlideWrapper>
   )
 }
