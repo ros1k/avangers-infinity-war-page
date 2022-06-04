@@ -26,14 +26,14 @@ const SideBarWrapper = styled.div`
 
 
 const RightSideBar = ({showButtons}) => {
-  const values = useContext(CastContext);
-  const { colorThemeType,colorTheme,colorGradient,currentSubPage,setCurrentSubPage } = values;
+  // const values = useContext(CastContext);
+  // const { setCurrentSubPage } = values;
   
-  const handleClick = (e) => {
-    e.preventDefault();
-    setCurrentSubPage(e.target.attributes[0].value);
-    e.current.classList.add('active');
-  }
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   setCurrentSubPage(e.target.attributes[0].value);
+  //   e.current.classList.add('active');
+  // }
 
 
   return (

@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import {castAvengers} from '../helpers/db/cast'
+import { Avengers } from '../helpers/db/avengers'
 
  export const CastContext = createContext();
 
@@ -12,10 +12,10 @@ import {castAvengers} from '../helpers/db/cast'
     const [currentSubPage, setCurrentSubPage] = useState(0);
     const [subPages,setSubPages] = useState(['Summary','History','Poster','Design']);
     useEffect(() => {
-        setColorThemeType(castAvengers.Avengers[0].colorThemeType)
-        setColorTheme(castAvengers.Avengers[0].colorTheme)
-        setColorGradient(castAvengers.Avengers[0].colorGradient)
-    });
+        setColorThemeType(Avengers.Avengers[0].colorThemeType)
+        setColorTheme(Avengers.Avengers[0].colorTheme)
+        setColorGradient(Avengers.Avengers[0].colorGradient)
+    },[]);
 
     const changeColorTheme = ( colorThemeType ,colorTheme, colorGradient) => {
         colorThemeType === "single" ? setColorTheme("single") : setColorTheme("gradient");

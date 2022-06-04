@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../../Layout'
 
-import {castAvengers} from '../../helpers/db/cast'
+import {Avengers} from '../../helpers/db/avengers'
 import {CastWrapper, CastNavList, CastCustomNavigation , MainSlider} from './styled'
 
 import image from '../../assets/images/wallpaperflare.com_wallpaper1.jpg'
@@ -49,13 +49,13 @@ const Cast = () => {
     <>
       <CastProvider>
         <Layout hide={true} showButtons={true}>
-            <CastWrapper bg={castAvengers.Avengers[active].bgImage}>
+            <CastWrapper bg={Avengers.Avengers[active].bgImage}>
                 <CastCustomNavigation 
                   {...navSettings}
                   asNavFor={CastSlider.current}
                   ref={NavSlider}
                 >
-                  {castAvengers.Avengers.map((cast,id) => {
+                  {Avengers.Avengers.map((cast,id) => {
                       return (
                         <CastSliderDots
                           className={id == active ? 'current' : ''}
@@ -75,7 +75,7 @@ const Cast = () => {
                   {...sliderSettings}
                   ref={CastSlider}
                 >
-                  {castAvengers.Avengers.map((cast,id) => {
+                  {Avengers.Avengers.map((cast,id) => {
                     return (
                       <CastMainSlide
                         index={id}

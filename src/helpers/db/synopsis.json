@@ -1,0 +1,65 @@
+{
+    "General": {
+        "Title": ["General"],
+        "Synopsis":{
+            "Title": "Synopsis",
+            "Description": "Description"
+        },
+        "History": {
+            "Title": "History",
+            "Description": "Description"
+        },
+        "Location":"Location",
+        "description": "General",
+        "isGradient": false,
+        "themeColor": "#00bcd4"
+  
+    },
+    "Gauntlet":{
+        "Title": ["General"],
+        "Synopsis":{
+            "Title": "Synopsis",
+            "Description": "Description"
+        },
+        "History": {
+            "Title": "History",
+            "Description": "Description"
+        },
+        "Location":"Location",
+        "description": "General",
+        "isGradient": false,
+        "themeColor": "#00bcd4"
+  
+    },
+    "Soul Gem": {
+        "Title": ["Soul Gem", "Soul Stone"],
+        "Synopsis":{
+            "Title": "Synopsis",
+            "Description": "Description"
+        },
+        "History": {
+            "Title": "History",
+            "Description": "Description"
+        },
+        "Location":"Location",
+        "description": "General",
+        "isGradient": false,
+        "themeColor": "#00bcd4"
+  
+    },
+    "Reality Gem": {
+
+    },
+    "Space Gem": {
+
+    },
+    "Power Gem": {
+
+    },
+    "Time Gem": {
+
+    },
+    "Mind Gem": {
+
+    }
+}

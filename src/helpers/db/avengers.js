@@ -1,5 +1,5 @@
 // Json file with Description of the data about Avengers and their powers
-export const castAvengers = {
+export const Avengers = {
     "Avengers": [
         {
             "name": "Thanos",
@@ -12,6 +12,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#5C00D7",
             "colorGradient": "",
+            "actor":"Josh Brolin",
+            "actorApi":"",
         },
         {
             "name": "Capitan America",
@@ -24,9 +26,11 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#321DFE",
             "colorGradient": "",
+            "actor":"Chris Evans",
+            "actorApi":"",
         },
         {
-            "name": "Capitan America",
+            "name": "Iron Man",
             "description" : "",
             "description_full" : "",
             "description_image" : "",
@@ -36,6 +40,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#FF1D31",
             "colorGradient": "",
+            "actor":"Robert Downey Jr.",
+            "actorApi":"",
         },
         {
             "name": "Thor",
@@ -48,6 +54,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#A50136",
             "colorGradient": "",
+            "actor":"Chris Hemsworth",
+            "actorApi":"",
         },
         {
             "name": "Doctor Strange",
@@ -60,6 +68,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#FF0A39",
             "colorGradient": "",
+            "actor":"Benedict Cumberbatch",
+            "actorApi":"",
         },
         {
             "name": "Black Widow",
@@ -72,6 +82,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#D9AA14",
             "colorGradient": "",
+            "actor":"Scarlett Johansson",
+            "actorApi":"",
         },
         {
             "name": "Star Lord",
@@ -84,6 +96,8 @@ export const castAvengers = {
             "colorThemeType": "gradient",
             "colorTheme": "#EF5D24",
             "colorGradient": "#8424DE",
+            "actor":"Chris Pratt",
+            "actorApi":"",
         },
         {
             "name": "Hulk",
@@ -96,6 +110,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#08C247",
             "colorGradient": "",
+            "actor":"Mark Ruffalo",
+            "actorApi":"",
         },
         {
             "name": "Iron Spider",
@@ -108,6 +124,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#E6033B",
             "colorGradient": "",
+            "actor":"Tom Holland",
+            "actorApi":"",
         },
         {
             "name": "Black Panther",
@@ -120,6 +138,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#5813FF",
             "colorGradient": "#8200FE",
+            "actor":"Chadwick Boseman",
+            "actorApi":"",
         },
         {
             "name": "Gamora",
@@ -132,6 +152,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#24F540",
             "colorGradient": "",
+            "actor":"Zoe Saldana",
+            "actorApi":"",
         },
         {
             "name": "Vision",
@@ -144,6 +166,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#FFF227",
             "colorGradient": "",
+            "actor":"Paul Bettany",
+            "actorApi":"",
         },
         {
             "name": "Shuri",
@@ -156,6 +180,8 @@ export const castAvengers = {
             "colorThemeType": "gradient",
             "colorTheme": "#152AAA",
             "colorGradient": "#7C00FF",
+            "actor":"Letitia Wright",
+            "actorApi":"",
         },
         {
             "name": "Groot",
@@ -168,6 +194,8 @@ export const castAvengers = {
             "colorThemeType": "gradinet",
             "colorTheme": "#05CB2C",
             "colorGradient": "#FB0026",
+            "actor":"Vin Diesel",
+            "actorApi":"",
         },
         {
             "name": "Okoye",
@@ -180,6 +208,8 @@ export const castAvengers = {
             "colorThemeType": "gradinet",
             "colorTheme": "#54024A",
             "colorGradient": "#FB0026",
+            "actor":"Danai Gurira",
+            "actorApi":"",
         },
         {
             "name": "Rocket",
@@ -192,6 +222,8 @@ export const castAvengers = {
             "colorThemeType": "gradient",
             "colorTheme": "#FDFA0B",
             "colorGradient": "#FC872A",
+            "actor":"Bradley Cooper",
+            "actorApi":"",
         },
         {
             "name": "Falcon",
@@ -204,6 +236,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#FF0140",
             "colorGradient": "#",
+            "actor":"Anthony Mackie",
+            "actorApi":"",
         },
         {
             "name": "Scarlet Witch",
@@ -216,6 +250,8 @@ export const castAvengers = {
             "colorThemeType": "gradient",
             "colorTheme": "#FF0F38",
             "colorGradient": "#F26A12",
+            "actor":"Elizabeth Olsen",
+            "actorApi":"",
         },
         {
             "name": "Drax",
@@ -228,6 +264,8 @@ export const castAvengers = {
             "colorThemeType": "gradient",
             "colorTheme": "#5717A9",
             "colorGradient": "#3C9C88",
+            "actor":"Dave Bautista",
+            "actorApi":"",
         },
         {
             "name": "Nebula",
@@ -240,6 +278,8 @@ export const castAvengers = {
             "colorThemeType": "gradient",
             "colorTheme": "#033BF4",
             "colorGradient": "#0269D2",
+            "actor":"Karen Gillan",
+            "actorApi":"",
         },
         {
             "name": "War Machine",
@@ -252,6 +292,8 @@ export const castAvengers = {
             "colorThemeType": "gradient",
             "colorTheme": "#C8C9CB",
             "colorGradient": "#7A898E",
+            "actor":"Don Cheadle",
+            "actorApi":"",
         },
         {
             "name": "Mantis",
@@ -264,6 +306,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#28BD47",
             "colorGradient": "",
+            "actor":"Pom Klementieff",
+            "actorApi":"",
         },
         {
             "name": "Winter Soldier",
@@ -276,6 +320,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#DBB12B",
             "colorGradient": "",
+            "actor":"Sebastian Stan",
+            "actorApi":"",
         },
         {
             "name": "Wong",
@@ -288,6 +334,8 @@ export const castAvengers = {
             "colorThemeType": "single",
             "colorTheme": "#FF142B",
             "colorGradient": "",
+            "actor":"Benedict Wong",
+            "actorApi":"",
         },
         
     ]
